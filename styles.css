@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffe5b4; /* Peach base color */
+  background-image: linear-gradient(135deg, #ffe5b4 0%, #ffdab9 100%);
+}
+
+#app {
+  width: 90%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+/* ATM Header */
+.atm-header {
+  background-color: #ff6f00;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.atm-header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Screen Styles */
+.screen {
+  display: none;
+  padding: 25px;
+}
+
+.screen.active {
+  display: block !important;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.screen h2 {
+  color: #e8a87c; /* Matching header color */
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.screen p {
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input {
+  width: calc(100% - 24px);
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.1em;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #e8a87c; /* Matching header color */
+  outline: none;
+  box-shadow: 0 0 5px rgba(232, 168, 124, 0.2);
+}
+
+button {
+  padding: 14px 20px;
+  background-color: #e8a87c; /* Matching header color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin: 8px 0;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #ffb38a; /* Lighter peachy hover state */
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.action-btn {
+  margin: 15px auto;
+  display: block;
+}
+
+.logout-btn {
+  background-color: #e53935;
+  margin-top: 20px;
+}
+
+.logout-btn:hover {
+  background-color: #f44336;
+}
+
+.error {
+  color: #ffebee;
+  font-size: 0.9em;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #d32f2f;
+  border-radius: 4px;
+}
+.success {
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #5cb04a;
+  border-radius: 4px;
+}
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Balance and Transaction Styles */
+.balance-amount {
+  font-size: 2em;
+  color: #e8a87c; /* Matching header color */
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.transaction-list {
+  margin-top: 20px;
+  border-top: 2px solid #eee;
+  padding-top: 20px;
+}
+
+.transaction-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-amount {
+  font-weight: bold;
+}
+
+.deposit {
+  color: #4caf50;
+}
+
+.withdrawal {
+  color: #f44336;
+}
